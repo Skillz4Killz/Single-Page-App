@@ -17,7 +17,7 @@
 <!-- TODO Add a directive to the body element in order to 
   bootstrap your Angular app. Be sure to use the name 'app' 
   so that the provided Angular routes function properly. -->
-<body>
+<body ng-app='app'>
 
   <div class="grid-container">
 
@@ -31,7 +31,10 @@
 
     <div class="grid-100">
 
-      <div class="recipes">
+      <div class="recipes" ng-controller="RecipesController">
+      <a href="/#/" title="">Recipes</a>
+      <a href="/#/edit/{Simple Beef Stew}" title="">Edit</a>
+      <a href="/#/add" title="">Add</a>
 
         <!-- The ng-view Angular directive is used to tell the Angular router
               where requested views should be loaded. Removing this directive 
@@ -48,7 +51,7 @@
   <script src="vendor/angular-route.js"></script>
   
   <!-- TODO Add script tags for your JavaScript files here -->
-
+<script src="scripts/app.js"></script>
   <script src="scripts/route-config.js"></script>
 </body>
 
